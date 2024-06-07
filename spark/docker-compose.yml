@@ -13,7 +13,7 @@ services:
       timeout: 3s
       retries: 3
     volumes:
-      - ./dados:/opt/spark/data
+      - ./data:/opt/spark/data
       - ./jobs:/opt/spark/apps
       - ./logs:/opt/spark/spark-events
       - ./wallet:/opt/wallet
@@ -48,7 +48,7 @@ services:
     env_file:
       - .env.spark
     volumes:
-      - ./dados:/opt/spark/data
+      - ./data:/opt/spark/data
       - ./jobs:/opt/spark/apps
       - ./logs:/opt/spark/spark-events
       - ./wallet:/opt/wallet

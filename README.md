@@ -6,6 +6,7 @@
 
 # Create spark containers
     cd spark
+    mkdir -p ./data ./jobs ./logs ./ wallet
     docker compose -f docker-compose.yml up -d --scale spark-worker=3
 
 
@@ -14,7 +15,7 @@
 
 # Create airflow containers
     cd airflow 
-    mkdir -p ./dags ./logs ./plugins ./config 
+    mkdir -p ./dags ./logs ./plugins ./config ./wallet
     docker compose up airflow-init 
     docker compose up -d
 
@@ -24,3 +25,6 @@ http://localhost:9091
 
 History Server
 http://localhost:18081
+
+Airflow
+http://localhost:8080
