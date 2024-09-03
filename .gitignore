@@ -1,0 +1,7 @@
+spark/logs
+spark/data
+spark/plugins
+spark/wallet
+spark/jobs
+*__pycache__*
+airflow/dags
